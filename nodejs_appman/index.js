@@ -45,6 +45,13 @@ rl.question("Input Some String : ", data => {
           }
       }
 
-    console.log(`Get Only Int : ${num_data}`);
+    int_data = 0; fac = 1;
+
+    for (let a = num_data.length - 1; a >= 0; a--) {
+        int_data += (num_data.charAt(a) - '0') * fac;
+        fac *= 10;
+      }
+
+    console.log(`Get Only Int : ${int_data}`);
     rl.close();
 })
